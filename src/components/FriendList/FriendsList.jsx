@@ -17,6 +17,11 @@ export function FriendsList({ friends }) {
   );
 }
 
-FriendsList.proptype = {
-  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
+FriendsList.PropTypes = {
+  friends: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    isOnline: PropTypes.bool.isRequired, 
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+  })).isRequired,
 };
