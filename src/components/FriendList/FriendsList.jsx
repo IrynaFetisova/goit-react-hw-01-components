@@ -17,7 +17,7 @@ export function FriendsList({ friends }) {
   );
 }
 
-FriendsList.PropTypes = {
+FriendsList.propTypes = {
   friends: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     isOnline: PropTypes.bool.isRequired, 
